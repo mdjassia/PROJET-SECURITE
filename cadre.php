@@ -1,5 +1,5 @@
 <?php
-//session_start();
+/**session_start();**/
 /*****Verification du mot de passe ****/
 if(isset($_POST['mdp'])){
 if($_POST['mdp']!="" and $_POST['pseudo']!=""){

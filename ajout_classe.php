@@ -1,5 +1,6 @@
 <?php
 session_start();
+
 include('cadre.php');
 mysqli_connect("localhost", "root", "");
 $link =mysqli_connect("localhost", "root", "");

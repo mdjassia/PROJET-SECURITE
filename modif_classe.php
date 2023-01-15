@@ -36,9 +36,9 @@ echo '<option value="'.$a['promotion'].'" '.choixpardefault2($a['promotion'],$pr
 if(isset($_POST['nom'])){//s'il a cliquer sur le bouton modifier
 	if($_POST['nom']!=""){
 		$id=$_POST['id'];
-		$nom=addslashes(Htmlspecialchars($_POST['nom']));
-		$prof=addslashes(Htmlspecialchars($_POST['prof']));
-		$promo=addslashes(Htmlspecialchars($_POST['promo']));
+		$nom=addslashes(($_POST['nom']));
+		$prof=addslashes(($_POST['prof']));
+		$promo=addslashes(($_POST['promo']));
 		mysqli_query($link,"update classe set nom='$nom',numprofcoord='$prof',promotion='$promo' where codecl='$id'");
 		?> <SCRIPT LANGUAGE="Javascript">	alert("Modifi� avec succ�s!"); </SCRIPT> <?php
 		echo '<br/><br/><a href="modif_classe.php?modif_classe='.$id.'">Revenir � la page precedente !</a>';
